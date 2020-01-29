@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent }  from './components/login/login.component';
+import { NavigationComponent }  from './components/navigation/navigation.component';
+import { TeacherTimetableComponent } from './components/teacher-timetable/teacher-timetable.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 
 
@@ -10,7 +12,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    component: TeacherTimetableComponent
 
   },
   { path: '**', component: PageNotFoundComponent }

@@ -20,21 +20,19 @@
 
   }
 </style>
+ {{ authService.getToken }}
 
-
-
-<div *ngIf="isUser">
+<div *ngIf="authService.logIn">
   <app-navigation></app-navigation>
   <router-outlet></router-outlet>
 
 </div>
-<div *ngIf="!isUser">
+<div  *ngIf="!authService.logIn">
   <app-login></app-login>
-  
+
 </div>
 
-
-
+<!-- *ngIf="authService.logIn" -->
 
 
 

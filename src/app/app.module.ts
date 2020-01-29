@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,10 +20,24 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     TeachersComponent,
     TeacherTimetableComponent,
     PageNotFoundComponent
+  
+    
+ 
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: 'login', component: LoginComponent },
+      { path: 'profile', component: TeacherTimetableComponent }
+       
+     
+]),
   ],
   providers: [],
   bootstrap: [AppComponent]
