@@ -2,17 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+import config from './config'; 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
  
-  uri = 'http://localhost:3000/api';
   token: any;
 
   constructor(private http: HttpClient,private router: Router) { }
   login(username: string, password: string) {
-    this.http.post(this.uri + '/auth/login', {username: username,password: password})
+    this.http.post(config.serverApi + '/auth/login', {username: username,password: password})
     .subscribe((resp: any) => {
      
       this.router.navigate(['./']);
