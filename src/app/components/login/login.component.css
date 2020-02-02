@@ -7,7 +7,7 @@
     background: #60a3bc !important;
   }
   .user_card {
-    height: 400px;
+    /* height: 400px; */
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -26,7 +26,7 @@
 
 
   .form_container {
-    margin-top: 100px;
+    margin-top: 50px;  
   }
   .login_btn {
     width: 100%;
@@ -56,5 +56,17 @@
   }
 
   .container{
-    margin-top:100px; 
+    margin-top:175px; 
+  }
+
+  .header_container {
+    width: 100%;
+    background: #c0392b !important;
+    color: white !important;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 30px;
+  }
+
+  .form_container form {
+    min-width: 275px;
   }

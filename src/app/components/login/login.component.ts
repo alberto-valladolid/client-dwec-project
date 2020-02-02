@@ -11,14 +11,16 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  error = '';
   username = '';
   password = '';
   constructor(private authService: AuthService) { }
 
   Login() {
+    this.error = '';
     console.log("you are logging in");
     this.authService.login(this.username, this.password); 
+    this.error = 'Usuario o contraseña incorrectos';
      
   }
 
