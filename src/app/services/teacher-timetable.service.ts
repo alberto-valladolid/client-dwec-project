@@ -9,10 +9,20 @@ import { AuthService } from './auth.service';
 })
 export class TeacherTimetableService {
 
-  API_URL= config.serverApi+"";
+  API_URL= config.serverApi+"/teachers";
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {  }
+// 
 
-  getTimeTable
+  llamada() {
+    // this.http.get(this.API_URL, {})
+    // .subscribe((resp: any) => {
+    
+    //   console.log(resp); 
+      
+    // })
+      
+  }
+  // getTimeTable
 
 }

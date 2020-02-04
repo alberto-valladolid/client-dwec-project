@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-
+import {TeacherTimetableService} from '../../services/teacher-timetable.service';
 
 @Component({
   selector: 'app-teacher-timetable',
@@ -10,9 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TeacherTimetableComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private teacherTimetableService: TeacherTimetableService) { }
 
   ngOnInit() {
+    //this.teacherTimetableService.llamada(); 
   }
 
 }

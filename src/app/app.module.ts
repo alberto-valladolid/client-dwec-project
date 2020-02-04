@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { TeachersComponent } from './components/teachers/teachers.component';
 import { TeacherTimetableComponent } from './components/teacher-timetable/teacher-timetable.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { ErrorInterceptorService } from './services/error-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
      
 ]),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true },  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
