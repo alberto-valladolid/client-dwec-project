@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-import config from './config'; 
+import config from '../config'; 
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class AuthService {
       })
       
   }
+  
 
   logout() {
     localStorage.removeItem('auth_token');
