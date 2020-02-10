@@ -11,11 +11,7 @@ import { TeachersComponent } from './components/teachers/teachers.component'
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TeacherTimetableComponent 
 
-  }  ,
   { path: '', component: TeachersComponent }
 
   

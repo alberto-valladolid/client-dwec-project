@@ -13,6 +13,7 @@ import { TeacherTimetableComponent } from './components/teacher-timetable/teache
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { ErrorInterceptorService } from './services/error-interceptor.service';
+import { TeachersService } from './services/teachers.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ErrorInterceptorService } from './services/error-interceptor.service';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptorService, multi: true },  
+    TeachersService
   ],
   bootstrap: [AppComponent]
 })

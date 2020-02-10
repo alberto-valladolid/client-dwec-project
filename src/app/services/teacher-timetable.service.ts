@@ -12,17 +12,5 @@ export class TeacherTimetableService {
   API_URL= config.serverApi+"/teachers";
 
   constructor(private http:HttpClient) {  }
-// 
-
-  llamada() {
-    // this.http.get(this.API_URL, {})
-    // .subscribe((resp: any) => {
-    
-    //   console.log(resp); 
-      
-    // })
-      
-  }
-  // getTimeTable
 
 }

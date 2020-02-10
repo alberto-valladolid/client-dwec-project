@@ -14,7 +14,8 @@ export class TeacherTimetableComponent implements OnInit {
   constructor(private teacherTimetableService: TeacherTimetableService) { }
 
   ngOnInit() {
-    //this.teacherTimetableService.llamada(); 
+    
+    
   }
 
 }

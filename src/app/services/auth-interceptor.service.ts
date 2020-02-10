@@ -14,7 +14,7 @@ export class AuthInterceptorService implements HttpInterceptor {
 
       const jwt = this.authService.logToken;
 
-      if (this.authService.logIn) {
+      if (this.authService.logIn) { //si está logado se añade el token en cada petición
           request = request.clone({
               setHeaders: { 
                   Authorization: `Basic ${jwt}`

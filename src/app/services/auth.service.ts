@@ -15,9 +15,13 @@ export class AuthService {
   login(username: string, password: string) {
     this.http.post(config.serverApi + '/auth/login', {username: username,password: password})
     .subscribe((resp: any) => {
-     
-      this.router.navigate([`${this.router.url}`]);
-      localStorage.setItem('auth_token', resp.token);
+
+        localStorage.setItem('auth_token', resp.token);        
+        localStorage.setItem('accType', resp.accType);
+        console.log(localStorage.getItem('accType')); 
+        this.router.navigate([`${this.router.url}`]);
+      
+        
       
       })
       
