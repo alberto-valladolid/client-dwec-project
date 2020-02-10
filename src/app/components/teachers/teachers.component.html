@@ -20,7 +20,9 @@
         <td>{{teacher.phone_number}}</td>
         <td>{{teacher.email}}</td>
         <td class="hidden">{{teacher.user_name}}</td>
-        <td><button class="btn btn-success" (click)="deleteUser(user)" *ngIf="accType == '3'"> Delete</button>
+
+        <!-- *ngIf="accType == '3'" -->
+        <td><button class="btn btn-success" (click)="deleteTeacher(teacher.id)" > Delete</button>
           <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;" *ngIf="accType == '3'"> Edit</button></td>
       </tr>
       </tbody>

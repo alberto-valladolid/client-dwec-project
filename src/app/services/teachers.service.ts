@@ -20,8 +20,12 @@ export class TeachersService {
 
   }
 
-  // deleteTeacher(teacher : Teacher): Observable<Teacher>{
-  //     return "asdf"; 
+  deleteTeacher(id : string){
+    return this.http.delete(this.API_URL + "/" + id); 
+  }
+
+  // updateTeacher(teacher : Teacher): Observable<Teacher>{
+  //   return this.http.delete(this.API_URL); 
   // }
   // getATeacher(id: string,tokenService: TokenService){
   //   return this.http.get( `${this.API_URL}/${id}` ); 

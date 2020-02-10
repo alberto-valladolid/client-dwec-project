@@ -14,6 +14,25 @@ export class TeachersComponent implements OnInit {
   accType = localStorage.getItem('accType');
   constructor(private teachersService: TeachersService ) { }
 
+  deleteTeacher(id : string){
+    this.teachersService.deleteTeacher(id).subscribe(
+      res =>{
+        console.log(res); 
+        this.getTeachers(); 
+      },
+      err => console.log(err)
+    )
+  }
+
+  getTeachers(){
+    this.teachersService.getTeachers().subscribe(
+      res =>{
+        this.teachers = res; 
+      },
+      err => console.log(err)
+    )
+  }
+
   ngOnInit() {
     this.teachersService.getTeachers().subscribe(
       res =>{
