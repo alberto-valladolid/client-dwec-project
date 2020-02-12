@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { ErrorInterceptorService } from './services/error-interceptor.service';
 import { TeachersService } from './services/teachers.service';
+import { AddTeacherComponent } from './components/teachers/add-teacher/add-teacher.component';
+import { EditTeacherComponent } from './components/teachers/edit-teacher/edit-teacher.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TeachersService } from './services/teachers.service';
     LoginComponent,
     TeachersComponent,
     TeacherTimetableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddTeacherComponent,
+    EditTeacherComponent
   
     
  

@@ -24,6 +24,13 @@ export class TeachersService {
     return this.http.delete(this.API_URL + "/" + id); 
   }
 
+  addTeacher(teacher : Teacher){
+    return this.http.post(this.API_URL, teacher); 
+  }
+
+  updateTeacher(id: string|number, updatedTeacher: Teacher){
+    return this.http.put(`${this.API_URL}/games/${id}`, updatedTeacher);
+  }
   // updateTeacher(teacher : Teacher): Observable<Teacher>{
   //   return this.http.delete(this.API_URL); 
   // }

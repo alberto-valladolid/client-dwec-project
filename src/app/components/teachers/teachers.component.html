@@ -1,6 +1,6 @@
 <div class="col-md-6 user-container marginAuto">
-    <h2 class="center marginAuto"> Profesores  {{accType}}</h2>
-    <button class="btn btn-danger" style="width:100px" (click)="addUser()" *ngIf="accType == '3'"> Añadir profesor</button>
+    <h2 class="center marginAuto"> Profesores </h2>
+    <button class="btn btn-danger" style="width:100px"  *ngIf="accType == '3'" routerLink="/teachers/add"> Añadir profesor</button>
     <table class="table table-striped">
       <thead>
       <tr>
@@ -22,8 +22,8 @@
         <td class="hidden">{{teacher.user_name}}</td>
 
         <!-- *ngIf="accType == '3'" -->
-        <td><button class="btn btn-success" (click)="deleteTeacher(teacher.id)" > Delete</button>
-          <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;" *ngIf="accType == '3'"> Edit</button></td>
+        <td><button class="btn btn-success" (click)="deleteTeacher(teacher.id)" *ngIf="accType == '3'"> Delete</button>
+          <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;" *ngIf="accType == '3'" routerLink="/teachers/edit"> Edit</button></td>
       </tr>
       </tbody>
     </table>
