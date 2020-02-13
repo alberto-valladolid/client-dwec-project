@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {TeachersService} from '../../services/teachers.service';
-
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-teachers',
@@ -12,7 +12,7 @@ export class TeachersComponent implements OnInit {
 
   teachers : any = [];
   accType = localStorage.getItem('accType');
-  constructor(private teachersService: TeachersService ) { }
+  constructor(private teachersService: TeachersService,private router: Router ) { }
 
   deleteTeacher(id : string){
     this.teachersService.deleteTeacher(id).subscribe(
@@ -22,6 +22,10 @@ export class TeachersComponent implements OnInit {
       },
       err => console.log(err)
     )
+  }
+
+  editTeacher(id : string){
+    this.router.navigate(['/teachers/edit/'+id]);
   }
 
   getTeachers(){

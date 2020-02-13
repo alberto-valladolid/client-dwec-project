@@ -18,7 +18,8 @@ const routes: Routes = [
 
   { path: '', component: TeachersComponent },
   { path: 'teachers/add', component: AddTeacherComponent },
-  { path: 'teachers/edit', component: EditTeacherComponent }, 
+  { path: 'teachers/edit/:id', component: EditTeacherComponent }, 
+  
   { path: '**', component: PageNotFoundComponent },
 
 ];

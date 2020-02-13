@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Teacher } from 'src/app/models/Teacher';
 import {TeachersService} from '../../../services/teachers.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-teacher',
@@ -22,7 +22,7 @@ export class AddTeacherComponent implements OnInit {
     
   }; 
 
-  constructor(private teachersService: TeachersService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private teachersService: TeachersService, private router: Router) { }
 
   ngOnInit() {
   }

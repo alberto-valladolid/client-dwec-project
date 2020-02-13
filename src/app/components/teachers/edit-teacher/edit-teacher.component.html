@@ -1,1 +1,27 @@
-<p>edit-teacher works!</p>
+<div class="col-md-8 user-container marginAuto">
+    <h2 class="text-center">Añadir profesor</h2>
+     <form >
+   
+          <div class="form-group">
+              <label for="username">Usuario:</label>
+              <input type="text"  placeholder="Usuario" name="user_name" [(ngModel)]="teacher.user_name" class="form-control" required >
+          </div>
+  
+          <div class="form-group">
+              <label for="firstName">Nombre:</label>
+              <input type="text" placeholder="Nombre" name="name" [(ngModel)]="teacher.name"  class="form-control" required >
+          </div>
+  
+          <div class="form-group">
+              <label for="lastName">Teléfono:</label>
+              <input type="number" placeholder="Teléfono" name="phone_number" [(ngModel)]="teacher.phone_number"  class="form-control" required >
+          </div>
+          <div class="form-group">
+              <label for="lastName">Correo electrónico:</label>
+              <input type="email" placeholder="Correo electrónico" name="email" [(ngModel)]="teacher.email"  class="form-control" required>
+          </div>
+  
+          <button class="btn btn-success" (click)="guardar(teacher.id)">Guardar</button>
+          <button class="btn btn-danger marginLeft20"  routerLink="">Volver</button>
+      </form>
+  </div> 

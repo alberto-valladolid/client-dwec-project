@@ -29,13 +29,11 @@ export class TeachersService {
   }
 
   updateTeacher(id: string|number, updatedTeacher: Teacher){
-    return this.http.put(`${this.API_URL}/games/${id}`, updatedTeacher);
+    return this.http.put(`${this.API_URL}/${id}`, updatedTeacher);
   }
-  // updateTeacher(teacher : Teacher): Observable<Teacher>{
-  //   return this.http.delete(this.API_URL); 
-  // }
-  // getATeacher(id: string,tokenService: TokenService){
-  //   return this.http.get( `${this.API_URL}/${id}` ); 
-  // }
+
+  getATeacher(id: string){
+    return this.http.get( `${this.API_URL}/${id}` ); 
+  }
 
 }
